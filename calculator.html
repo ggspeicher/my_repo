@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <h1>Calculadora de Guillermo Speicher</h1>
+    <div>
+        <input type="text" id="n1">
+        <hr>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <button id="pow3"> x^3 </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+        document.getElementById("pow3").addEventListener("click", powChow(3));
+
+        function powChow(n) {
+            return function () {
+                var num = document.getElementById("n1");
+                var res = Math.pow(num.value, n);
+                num.value = res;
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
