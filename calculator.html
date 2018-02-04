@@ -19,6 +19,11 @@
                         <button id="pow3"> x^3 </button>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <button id="sine"> sin(x) </button>
+                    </td>
+                </tr>
             </table>
         </div>
 
@@ -28,6 +33,8 @@
     <script type="text/javascript">
         document.getElementById("pow3").addEventListener("click", powChow(3));
 
+        document.getElementById("sine").addEventListener("click", sine);
+
         function powChow(n) {
             return function () {
                 var num = document.getElementById("n1");
@@ -35,9 +42,14 @@
                 num.value = res;
             }
         }
+        function sine() {
+            var num = document.getElementById("n1");
+            num.value = Math.sin(num.value);
+        }
 
     </script>
 
 
 </body>
+
 </html>
